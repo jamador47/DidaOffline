@@ -7,7 +7,7 @@
     <title>Widget / 3D GCode Viewer</title>
 
     <!-- ChiliPeppr is based on bootstrap CSS. -->
-    <link rel="stylesheet" type="text/css" href="//localhost:8123/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//localhost/DidaOffline//css/bootstrap.min.css">
 
     <!-- Customized version of require.js for ChiliPeppr. Please see require.js docs for how
     ChiliPeppr's dependency system works as it's based on require.js. -->
@@ -113,22 +113,22 @@ requirejs.config({
         // Keep in mind that the /slingshot url does the same as /geturl but it is not cached
         // Three: '//i2dcui.appspot.com/slingshot?url=http://threejs.org/build/three.min.js',
         // Three: '//i2dcui.appspot.com/geturl?url=http://threejs.org/build/three.js',
-        Three: 'http://localhost:8123/three',
-        ThreeTextGeometry: '//localhost:8123/three/TextGeometry',
-        ThreeFontUtils: '//localhost:8123/three/FontUtils',
+        Three: 'http://localhost/DidaOffline//three',
+        ThreeTextGeometry: '//localhost/DidaOffline//three/TextGeometry',
+        ThreeFontUtils: '//localhost/DidaOffline//three/FontUtils',
         //ThreeDetector: '//i2dcui.appspot.com/geturl?url=http://threejs.org/examples/js/Detector.js',
-        ThreeDetector: 'http://localhost:8123/mrdoob/Detector',
+        ThreeDetector: 'http://localhost/DidaOffline//mrdoob/Detector',
         //ThreeTrackballControls: '//i2dcui.appspot.com/geturl?url=http://threejs.org/examples/js/controls/TrackballControls.js',
         // Latest release
         // ThreeTrackballControls: '//i2dcui.appspot.com/slingshot?url=http://threejs.org/examples/js/controls/TrackballControls.js',
         // r79 (to solve that mousewheel zoom started not working in r80, so had to force to older version. eventually they'll fix the bug cuz i filed it)
         // ThreeTrackballControls: '//i2dcui.appspot.com/slingshot?url=http://rawgit.com/mrdoob/three.js/r79/examples/js/controls/TrackballControls.js',
-        ThreeTrackballControls: 'http://localhost:8123/mrdoob/TrackballControls',
+        ThreeTrackballControls: 'http://localhost/DidaOffline//mrdoob/TrackballControls',
         ThreeOrbitControls: '//threejs.org/examples/js/controls/OrbitControls',
-        ThreeHelvetiker: '//localhost:8123/three/threehelvetiker',
+        ThreeHelvetiker: '//localhost/DidaOffline//three/threehelvetiker',
         ThreeTypeface: 'https://superi.googlecode.com/svn-history/r1953/trunk/MBrand/MBrand/Scripts/typeface-0.15',
-        ThreeTween: '//localhost:8123/three/tween.min',
-        ThreeBufferGeometryUtils: '//localhost:8123/three/BufferGeometryUtils',
+        ThreeTween: '//localhost/DidaOffline//three/tween.min',
+        ThreeBufferGeometryUtils: '//localhost/DidaOffline//three/BufferGeometryUtils',
         ThreeCanvasRenderer: '//i2dcui.appspot.com/geturl?url=http://threejs.org/examples/js/renderers/CanvasRenderer.js',
         ThreeProjector: '//i2dcui.appspot.com/geturl?url=http://threejs.org/examples/js/renderers/Projector.js',
     },
@@ -362,7 +362,7 @@ cpdefine('inline:com-chilipeppr-widget-3dviewer', ['chilipeppr_ready', 'Three', 
                 //console.log("would have opened octocat");
                 //that.openGCodeFromPath(lastLoaded || 'examples/octocat.gcode');
                 console.log("loading chilipeppr logo");
-                that.openGCodeFromPath(lastLoaded || 'http://localhost:8123/nc/chilipepprlogo.nc');
+                that.openGCodeFromPath(lastLoaded || 'http://localhost/DidaOffline//nc/chilipepprlogo.nc');
             }
             
             var lastFpsRate = localStorage.getItem ('fpsRate');

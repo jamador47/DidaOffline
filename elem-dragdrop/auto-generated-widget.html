@@ -7,7 +7,7 @@
   <title>Element / Drag Drop</title>
 
   <!-- ChiliPeppr is based on bootstrap CSS. -->
-  <link rel="stylesheet" type="text/css" href="//localhost:8123/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="//localhost/DidaOffline//css/bootstrap.min.css">
 
   <!-- Customized version of require.js for ChiliPeppr. Please see require.js docs for how
     ChiliPeppr's dependency system works as it's based on require.js. -->
@@ -106,7 +106,7 @@ cpdefine("inline:com-chilipeppr-elem-dragdrop", ["chilipeppr_ready"], function (
             
             // setup chilipeppr logo btn click
             //$('.com-chilipeppr-elem-dragdrop-loadlogo').click(this.loadChiliPepprGcode.bind(this));
-            $('.com-chilipeppr-elem-dragdrop-loadlogo').click("//localhost:8123/nc/chilipepprlogo.nc", this.loadUrlDoNotCreateRecentFileEntry.bind(this));
+            $('.com-chilipeppr-elem-dragdrop-loadlogo').click("//localhost/DidaOffline//nc/chilipepprlogo.nc", this.loadUrlDoNotCreateRecentFileEntry.bind(this));
             //$('.com-chilipeppr-elem-dragdrop-loadlogoinch').click(this.loadChiliPepprGcodeInch.bind(this));
             $('.com-chilipeppr-elem-dragdrop-loadlogoinch').click("//i2dcui.appspot.com/3d/chilipepprlogo.inches.nc", this.loadUrlDoNotCreateRecentFileEntry.bind(this));
             $('.com-chilipeppr-elem-dragdrop-loadcirclediamondsquare').click("//i2dcui.appspot.com/img/gcode/Circle-diamond-square-50-45-40mm.gcode", this.loadUrlDoNotCreateRecentFileEntry.bind(this));
@@ -353,7 +353,7 @@ cpdefine("inline:com-chilipeppr-elem-dragdrop", ["chilipeppr_ready"], function (
             this.loadChiliPepprGcode(evt, "http://www.chilipeppr.com/3d/chilipepprlogo.inches.nc");
         },
         loadChiliPepprGcode: function(evt, alturl) {
-            var url = 'http://localhost:8123/nc/chilipepprlogo.nc';
+            var url = 'http://localhost/DidaOffline//nc/chilipepprlogo.nc';
             if (alturl !== undefined && alturl != null) url = alturl;
             var that = this;
             $.get(url, null, function(data) {

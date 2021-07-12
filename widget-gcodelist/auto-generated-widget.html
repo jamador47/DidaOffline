@@ -7,7 +7,7 @@
     <title>Widget / Gcode v8</title>
 
     <!-- ChiliPeppr is based on bootstrap CSS. -->
-    <link rel="stylesheet" type="text/css" href="//localhost:8123/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//localhost/DidaOffline//css/bootstrap.min.css">
 
     <script type='text/javascript' src="//i2dcui.appspot.com/js/require.js"></script>
 
@@ -321,11 +321,11 @@
         requirejs.config({
             paths: {
 
-                jqueryui: '//localhost:8123/ui/jquery.ui.core',
-                jqueryuiWidget: '//localhost:8123/ui/jquery.ui.widget',
-                jqueryuiMouse: '//localhost:8123/ui/jquery.ui.mouse',
-                jqueryuiResizeable: '//localhost:8123/ui/jquery.ui.resizable',
-                waypoints: 'http://localhost:8123/waypoints.min',
+                jqueryui: '//localhost/DidaOffline//ui/jquery.ui.core',
+                jqueryuiWidget: '//localhost/DidaOffline//ui/jquery.ui.widget',
+                jqueryuiMouse: '//localhost/DidaOffline//ui/jquery.ui.mouse',
+                jqueryuiResizeable: '//localhost/DidaOffline//ui/jquery.ui.resizable',
+                waypoints: 'http://localhost/DidaOffline//waypoints.min',
 
             },
             shim: {
@@ -781,14 +781,14 @@
                     this.setupOnQueueWriteCompletePubSub();
 
                     // load jquery-ui css, but make sure nobody else loaded it
-                    if (!$("link[href='//localhost:8123/smoothness/jquery-ui.css']").length)
+                    if (!$("link[href='//localhost/DidaOffline//smoothness/jquery-ui.css']").length)
                         $('<link>')
                         .appendTo('head')
                         .attr({
                             type: 'text/css',
                             rel: 'stylesheet'
                         })
-                        .attr('href', '//localhost:8123/smoothness/jquery-ui.css');
+                        .attr('href', '//localhost/DidaOffline//smoothness/jquery-ui.css');
 
                     // load local file
                     //localStorage.removeItem('last-imported');
@@ -800,7 +800,7 @@
                     } else {
                         console.log("gcode viewer loading from path lastLoaded or 15mm_cube.gcode");
                         var that = this;
-                        if (!lastLoaded) lastLoaded = 'http://localhost:8123/nc/chilipepprlogo.nc';
+                        if (!lastLoaded) lastLoaded = 'http://localhost/DidaOffline//nc/chilipepprlogo.nc';
                         $.get(lastLoaded, null, function(data) {
                                 localStorage.setItem('last-loaded', lastLoaded);
                                 localStorage.removeItem('last-imported');

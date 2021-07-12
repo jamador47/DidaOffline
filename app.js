@@ -88,7 +88,7 @@ require(["jquery","bootstrap","amplify"], function() {
 					window.location.origin.match(/c9users.io/i) ||
 					window.location.origin.match(/localhost/) ) {
 				console.log("We are doing a raw load (not via chilipeppr.com/geturl) cuz in jsfiddle, cloud9, or localhost. window.location.origin:", window.location.origin);
-				$.get("//localhost:8123/" + panel.url, function(data) {
+				$.get("//localhost/DidaOffline//" + panel.url, function(data) {
 					data = that.cleanup(data);
 					if (isAppend)
 						$('body').prepend(data);
