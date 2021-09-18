@@ -8407,8 +8407,26 @@ entrabajo = 1;
                 onM3BtnClick: function(evt) {
 
 
-                    //Validaciones
+                    
 
+//ENCENDER VENTILADORA
+                    var HttpClient = function() {
+                        this.get = function(aUrl, aCallback) {
+                            var anHttpRequest = new XMLHttpRequest();
+                            anHttpRequest.onreadystatechange = function() {
+                                if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
+                                    aCallback(anHttpRequest.responseText);
+                            }
+                            anHttpRequest.open("GET", aUrl, true);
+                            anHttpRequest.send(null);
+                        }
+                    }
+                    var theurl = 'http://192.168.0.88/arduino/digital/25/1';
+                    var client = new HttpClient();
+                    client.get(theurl, function(response) {});
+
+
+//Validaciones
                     var HttpClient = function() {
                         this.get = function(aUrl, aCallback) {
                             var anHttpRequest = new XMLHttpRequest();
@@ -8555,6 +8573,23 @@ entrabajo = 1;
 
                 onM5BtnClick: function(evt) {
                     console.log("saying hello 2 from btn in tab 1");
+
+
+                    //APAGAR VENTILADORA
+                    var HttpClient = function() {
+                        this.get = function(aUrl, aCallback) {
+                            var anHttpRequest = new XMLHttpRequest();
+                            anHttpRequest.onreadystatechange = function() {
+                                if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
+                                    aCallback(anHttpRequest.responseText);
+                            }
+                            anHttpRequest.open("GET", aUrl, true);
+                            anHttpRequest.send(null);
+                        }
+                    }
+                    var theurl = 'http://192.168.0.88/arduino/digital/25/0';
+                    var client = new HttpClient();
+                    client.get(theurl, function(response) {});
 
 
                     var HttpClient = function() {
